@@ -41,7 +41,7 @@ contract Metahut is Initializable, OwnableUpgradeable {
     uint256 public METAHUT_PUBLIC_PRICE_BUSD;
     uint256 public METAHUT_WHITELIST_PRICE_METO;
     uint256 public METAHUT_WHITELIST_PRICE_BUSD;
-    uint256 BUSD_METO_PAIR; //1 busd value by meto
+    uint256 public BUSD_METO_PAIR; //1 busd value by meto
     uint METAHUT_MAX_COUNT_PER_TRANSACTION;
     bool public launchpadSaleStatus;
     bool public whiteListSaleStatus;
@@ -55,9 +55,9 @@ contract Metahut is Initializable, OwnableUpgradeable {
         busd = IERC20Upgradeable(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
         // meto = IERC20Upgradeable(0xc39A5f634CC86a84147f29a68253FE3a34CDEc57);
         // busd = IERC20Upgradeable(0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee);
-        shoppingRoom = IMetahut();
-        nftRoom = IMetahut();
-        eventRoom = IMetahut();
+        shoppingRoom = IMetahut(0x5d217023db033E606eA7294D33a89119c1e952d9);
+        nftRoom = IMetahut(0x59f967894B9185C8a4b6f8FcE51584547F63cf71);
+        eventRoom = IMetahut(0x7B5046D4Ac1Da36d8E134fb214fB4B918036AFB6);
 
         //set inital values
         ID_NOT_FOUND = 99999999999999999999;
@@ -162,7 +162,7 @@ contract Metahut is Initializable, OwnableUpgradeable {
         metahuts[_owner].push(metahut);
     }
 
-    
+
     function mintWithMeto(uint _count) public {
         require(whiteListSaleStatus || publicSaleStatus,  "sale not started.");
         
