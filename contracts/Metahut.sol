@@ -15,13 +15,13 @@ contract Metahut is Initializable, OwnableUpgradeable {
     IMetahut nftRoom;
     IMetahut eventRoom;
 
-    struct Metahut {
+    struct hut {
         uint256 shopping_room;
         uint256 nft_room;
         uint256 event_room;
     }
 
-    mapping(address => Metahut[]) public metahuts;
+    mapping(address => hut[]) public metahuts;
     
     enum ASSET {METO, BUSD}
 
@@ -158,7 +158,7 @@ contract Metahut is Initializable, OwnableUpgradeable {
         minted[1] = r2;
         minted[2] = r3;
         
-        Metahut memory metahut = Metahut(r1, r2, r3);
+        Metahut memory metahut = hut(r1, r2, r3);
         metahuts[_owner].push(metahut);
     }
 
