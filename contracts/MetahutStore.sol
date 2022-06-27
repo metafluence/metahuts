@@ -51,8 +51,10 @@ contract MetahutStore is Initializable, OwnableUpgradeable {
 
     function initialize() public initializer {
         __Ownable_init();
-        meto = IERC20Upgradeable(0xa78775bba7a542F291e5ef7f13C6204E704A90Ba);
-        busd = IERC20Upgradeable(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
+        // meto = IERC20Upgradeable(0xa78775bba7a542F291e5ef7f13C6204E704A90Ba);
+        // busd = IERC20Upgradeable(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
+        meto = IERC20Upgradeable(0xc39A5f634CC86a84147f29a68253FE3a34CDEc57);
+        busd = IERC20Upgradeable(0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee);
         shoppingRoom = IMetahut(0xdA1377C6ba9f8489Df1cc845DE51723312D0c79C);
         nftRoom = IMetahut(0xCb0fF77CEf0966366E60F1e1dc292BE31D784102);
         eventRoom = IMetahut(0xf97AFDd620f315BBf687bF19639f3AA936e503a2);
@@ -65,7 +67,7 @@ contract MetahutStore is Initializable, OwnableUpgradeable {
         METAHUT_WHITELIST_PRICE_METO = 3500;
         METAHUT_WHITELIST_PRICE_BUSD = 3700;
         BUSD_METO_PAIR = 345 * decimals();
-        METAHUT_MAX_COUNT_PER_TRANSACTION = 10;
+        // METAHUT_MAX_COUNT_PER_TRANSACTION = 100000000000000;
     }
 
     event BoughtMetahut(address indexed _from, uint256 _price);
@@ -167,7 +169,7 @@ contract MetahutStore is Initializable, OwnableUpgradeable {
 
     function mintWithMeto(uint _count) public {
         require(whiteListSaleStatus || publicSaleStatus,  "sale not started.");
-        require(_count > 0 && _count <= METAHUT_MAX_COUNT_PER_TRANSACTION, "can not pass max count per transaction.");
+        // require(_count > 0 && _count <= METAHUT_MAX_COUNT_PER_TRANSACTION, "can not pass max count per transaction.");
         
         uint256 totalPrice = calculateTotalPrice(ASSET.METO) * _count;
         require(meto.balanceOf(msg.sender) > totalPrice,  "User has not enough balance.");
@@ -183,7 +185,7 @@ contract MetahutStore is Initializable, OwnableUpgradeable {
 
     function mintWithBusd(uint _count) public {
         require(whiteListSaleStatus || publicSaleStatus,  "sale not started.");
-        require(_count > 0 && _count <= METAHUT_MAX_COUNT_PER_TRANSACTION, "can not pass max count per transaction.");
+        // require(_count > 0 && _count <= METAHUT_MAX_COUNT_PER_TRANSACTION, "can not pass max count per transaction.");
 
         uint256 totalPrice = calculateTotalPrice(ASSET.BUSD) * _count;
         require(busd.balanceOf(msg.sender) > totalPrice,  "User has not enough balance.");

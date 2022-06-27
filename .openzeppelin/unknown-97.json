@@ -74,6 +74,11 @@
       "address": "0x3E726dE52F4ACcF041064B935505B3e9411E9074",
       "txHash": "0x6264ddede267b16a0f9f9e9ffa662f005cbfc27bf78fd33604a3cfce75dd1e4a",
       "kind": "transparent"
+    },
+    {
+      "address": "0x9A8E9b4cF47E6c74Ac7801c11e3D7dBB5b3a4f7A",
+      "txHash": "0x65e5dc213ae5dfcf06a0d497150b8f1f68843a0d4d356a29a00e42707a0c4c4d",
+      "kind": "transparent"
     }
   ],
   "impls": {
@@ -2617,6 +2622,327 @@
     "725cff5fe9645d74a565487dc53f588c9c93a942d5e6fe2136a7c310f529eaa1": {
       "address": "0xe198573627919265b40764126d75973295d8Ea21",
       "txHash": "0x43a9b3526b4c402cd11b77d143aee0409fc274ccddd79b69e553cd42bf378f40",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "label": "meto",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20Upgradeable)343",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:12"
+          },
+          {
+            "label": "busd",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_contract(IERC20Upgradeable)343",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:13"
+          },
+          {
+            "label": "shoppingRoom",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_contract(IMetahut)2839",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:14"
+          },
+          {
+            "label": "nftRoom",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_contract(IMetahut)2839",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:15"
+          },
+          {
+            "label": "eventRoom",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(IMetahut)2839",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:16"
+          },
+          {
+            "label": "metahuts",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_mapping(t_address,t_array(t_struct(Metahut)2872_storage)dyn_storage)",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:24"
+          },
+          {
+            "label": "disabledLands",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:33"
+          },
+          {
+            "label": "whiteListAddresses",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:34"
+          },
+          {
+            "label": "launchpadLands",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_mapping(t_address,t_struct(OptionLaunchpadLand)2886_storage)",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:35"
+          },
+          {
+            "label": "ID_NOT_FOUND",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:37"
+          },
+          {
+            "label": "ID_SKIP_PRICE_VALUE",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:39"
+          },
+          {
+            "label": "METAHUT_PUBLIC_PRICE_METO",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:40"
+          },
+          {
+            "label": "METAHUT_PUBLIC_PRICE_BUSD",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:41"
+          },
+          {
+            "label": "METAHUT_WHITELIST_PRICE_METO",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:42"
+          },
+          {
+            "label": "METAHUT_WHITELIST_PRICE_BUSD",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:43"
+          },
+          {
+            "label": "BUSD_METO_PAIR",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:44"
+          },
+          {
+            "label": "METAHUT_MAX_COUNT_PER_TRANSACTION",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_uint256",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:45"
+          },
+          {
+            "label": "launchpadSaleStatus",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_bool",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:46"
+          },
+          {
+            "label": "whiteListSaleStatus",
+            "offset": 1,
+            "slot": "118",
+            "type": "t_bool",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:47"
+          },
+          {
+            "label": "privateSaleStatus",
+            "offset": 2,
+            "slot": "118",
+            "type": "t_bool",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:48"
+          },
+          {
+            "label": "publicSaleStatus",
+            "offset": 3,
+            "slot": "118",
+            "type": "t_bool",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:49"
+          },
+          {
+            "label": "PRICE_UPDATER",
+            "offset": 4,
+            "slot": "118",
+            "type": "t_address",
+            "contract": "MetahutStore",
+            "src": "contracts/MetahutStore.sol:50"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Metahut)2872_storage)dyn_storage": {
+            "label": "struct MetahutStore.Metahut[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC20Upgradeable)343": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IMetahut)2839": {
+            "label": "contract IMetahut",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(Metahut)2872_storage)dyn_storage)": {
+            "label": "mapping(address => struct MetahutStore.Metahut[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(OptionLaunchpadLand)2886_storage)": {
+            "label": "mapping(address => struct MetahutStore.OptionLaunchpadLand)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Metahut)2872_storage": {
+            "label": "struct MetahutStore.Metahut",
+            "members": [
+              {
+                "label": "shopping_room",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "nft_room",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "event_room",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(OptionLaunchpadLand)2886_storage": {
+            "label": "struct MetahutStore.OptionLaunchpadLand",
+            "members": [
+              {
+                "label": "ClaimableCount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "ClaimedCount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "7179cb12ebb107db9e3779eaaff23c3fa2106fbae09085f8496d53db43031c68": {
+      "address": "0x3aD2182c56850dAaAbB4Ddb9Fff5d523dec7b647",
+      "txHash": "0x8bfd76f2fe5653f96fc3f5767f3392ee27c587d76a4b54f94c9f75d8b3a0b594",
       "layout": {
         "storage": [
           {
