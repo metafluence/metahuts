@@ -19,7 +19,7 @@ contract EventRoom is Initializable, ERC721EnumerableUpgradeable, OwnableUpgrade
         __Ownable_init();
         __ERC721_init("EventRoom", "Er");
         setBaseURI("ipfs://QmeYyiEmYhGmEuMU8q9uMs7Uprs7KGdEiKBwRpSsoapn2K/");
-        MAX_ID = 24000;
+        MAX_ID = 3500;
     }
 
     function _baseURI() internal view  virtual override returns (string memory) {
