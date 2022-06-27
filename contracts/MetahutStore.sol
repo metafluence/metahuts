@@ -55,9 +55,9 @@ contract MetahutStore is Initializable, OwnableUpgradeable {
         busd = IERC20Upgradeable(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
         // meto = IERC20Upgradeable(0xc39A5f634CC86a84147f29a68253FE3a34CDEc57);
         // busd = IERC20Upgradeable(0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee);
-        shoppingRoom = IMetahut(0xdA1377C6ba9f8489Df1cc845DE51723312D0c79C);
-        nftRoom = IMetahut(0xCb0fF77CEf0966366E60F1e1dc292BE31D784102);
-        eventRoom = IMetahut(0xf97AFDd620f315BBf687bF19639f3AA936e503a2);
+        shoppingRoom = IMetahut();
+        nftRoom = IMetahut();
+        eventRoom = IMetahut();
 
         //set inital values
         ID_NOT_FOUND = 99999999999999999999;

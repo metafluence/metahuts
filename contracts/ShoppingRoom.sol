@@ -18,7 +18,7 @@ contract ShoppingRoom is Initializable, ERC721EnumerableUpgradeable, OwnableUpgr
     function initialize() public initializer {
         __Ownable_init();
         __ERC721_init("ShoppingRoom", "Sr");
-        setBaseURI("ipfs://QmeYyiEmYhGmEuMU8q9uMs7Uprs7KGdEiKBwRpSsoapn2K/");
+        setBaseURI("https://dcdn.metafluence.com/metahut/shoppings/");
         MAX_ID = 3500;
     }
 
