@@ -26,10 +26,6 @@ module.exports = {
    //  },
    networks: {
       hardhat: {},
-      ropsten: {
-         url: API_URL,
-         accounts: [`0x${PRIVATE_KEY}`]
-      },
       bsc_testnet: {
          url: "https://data-seed-prebsc-1-s1.binance.org:8545",
          chainId: 97,
