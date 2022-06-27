@@ -18,7 +18,7 @@ contract EventRoom is Initializable, ERC721EnumerableUpgradeable, OwnableUpgrade
     function initialize() public initializer {
         __Ownable_init();
         __ERC721_init("EventRoom", "Er");
-        setBaseURI("https://dcdn.metafluence.com/metahut/events/");
+        setBaseURI("https://dcdn.metafluence.com/metahuts/event/");
         MAX_ID = 3500;
     }
 
