@@ -67,7 +67,6 @@ contract Metahut is Initializable, OwnableUpgradeable {
         METAHUT_WHITELIST_PRICE_METO = 3500;
         METAHUT_WHITELIST_PRICE_BUSD = 3700;
         BUSD_METO_PAIR = 369 * decimals();
-        // METAHUT_MAX_COUNT_PER_TRANSACTION = 100000000000000;
     }
 
     event BoughtMetahut(address indexed _from, uint256 _price);
@@ -100,10 +99,6 @@ contract Metahut is Initializable, OwnableUpgradeable {
     function setBusdMetoPair(uint256 _price) public {
         require(msg.sender == PRICE_UPDATER || msg.sender == owner(), "price updater is not valid.");
         BUSD_METO_PAIR = _price;
-    }
-
-    function setMetahutMaxCountPerAccount(uint _v) public onlyOwner {
-        METAHUT_MAX_COUNT_PER_TRANSACTION = _v;
     }
 
     function setPriceUpdater(address _v) public onlyOwner {
@@ -169,7 +164,6 @@ contract Metahut is Initializable, OwnableUpgradeable {
 
     function mintWithMeto(uint _count) public {
         require(whiteListSaleStatus || publicSaleStatus,  "sale not started.");
-        // require(_count > 0 && _count <= METAHUT_MAX_COUNT_PER_TRANSACTION, "can not pass max count per transaction.");
         
         uint256 totalPrice = calculateTotalPrice(ASSET.METO) * _count;
         require(meto.balanceOf(msg.sender) > totalPrice,  "User has not enough balance.");
@@ -185,8 +179,6 @@ contract Metahut is Initializable, OwnableUpgradeable {
 
     function mintWithBusd(uint _count) public {
         require(whiteListSaleStatus || publicSaleStatus,  "sale not started.");
-        // require(_count > 0 && _count <= METAHUT_MAX_COUNT_PER_TRANSACTION, "can not pass max count per transaction.");
-
         uint256 totalPrice = calculateTotalPrice(ASSET.BUSD) * _count;
         require(busd.balanceOf(msg.sender) > totalPrice,  "User has not enough balance.");
 
