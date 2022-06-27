@@ -144,7 +144,7 @@ contract Metahut is Initializable, OwnableUpgradeable {
     /* End of Administrative Functions */
 
     // return user nft collection 
-    function myCollection() public view returns(Metahut[] memory) {
+    function myCollection() public view returns(hut[] memory) {
         return metahuts[msg.sender];
     }
 
@@ -158,10 +158,11 @@ contract Metahut is Initializable, OwnableUpgradeable {
         minted[1] = r2;
         minted[2] = r3;
         
-        Metahut memory metahut = hut(r1, r2, r3);
+        hut memory metahut = hut(r1, r2, r3);
         metahuts[_owner].push(metahut);
     }
 
+    
     function mintWithMeto(uint _count) public {
         require(whiteListSaleStatus || publicSaleStatus,  "sale not started.");
         
