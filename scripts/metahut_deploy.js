@@ -1,5 +1,5 @@
 async function main() {
-    const MyNFT = await ethers.getContractFactory("MetahutStore")
+    const MyNFT = await ethers.getContractFactory("Metahut")
   
     // Start deployment, returning a promise that resolves to a contract object
     const myNFT = await upgrades.deployProxy(MyNFT)

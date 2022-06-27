@@ -8,7 +8,7 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "./IMetahut.sol";
 
 
-contract MetahutStore is Initializable, OwnableUpgradeable {
+contract Metahut is Initializable, OwnableUpgradeable {
     IERC20Upgradeable meto;
     IERC20Upgradeable busd;
     IMetahut shoppingRoom;
