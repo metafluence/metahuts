@@ -17,7 +17,7 @@ contract NftRoom is Initializable, ERC721EnumerableUpgradeable, OwnableUpgradeab
 
     function initialize() public initializer {
         __Ownable_init();
-        __ERC721_init("NftRoom", "Nr");
+        __ERC721_init("Metahut Rooms", "NFT");
         setBaseURI("https://dcdn.metafluence.com/metahuts/nft/");
         MAX_ID = 3500;
     }
